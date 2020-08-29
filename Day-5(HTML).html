@@ -1,3 +1,91 @@
+<!--
+생활코딩
+하이퍼텍스트와 속성.
+
+하이퍼 링크 거는 법!
+<a href = " " target = "_blank" title = " "> </a>
+a: 하이퍼링크를 삽입하는 태그 (anchor)
+href 에는 링크 삽입
+target = "_blank" : 새로운 창을 열어주는 기능
+title = " ": 마우스 커서 올렸을때 나타나는 보충제목 혹은 설명
+
+태그의 중첩과 목록.
+<li> </li>: 글 한 줄씩 존재 및 앞에 점이 찍힘
+<ul> </ul>: Grouping, 리스트 분리
+<ol> </ol>: 순서대로 숫자가 붙는 리스트 형태
+
+문서의 구조.
+<title> </title>: 웹페이지 제목
+<meta charset="utf-8">: 글자 깨짐 방지
+<head> </head>: 본문이 아닌 것들에 대한 태그 <-meta, title 태그가 들어감
+<body> </body>: 본문에 대한 태그
+<html> </html>: head, body를 묶는 태그로 약속됨
+
+DOCTYPE.
+<!DOCTYPE html>: <html> 태그 앞에 무조건 써라!, 어떠한 표준을 따르고 있는 html인지를 나타냄
+
+웹사이트 만들기.
+
+개발도구.
+atom (추천 확장기능 emmet)
+sublime text (추천 확장기능 emmet)
+bracket
+
+HTML의 변천사와 통계.
+
+이제 자유롭게 배우자!
+
+form action
+-> <input type="text">: 문자 입력 받음
+<form action = "http://localhost/login.php">: 여기로 보내주세요!
+    <p>아이디: <input type = "text" name = "id" value = "---"></p> : value 기본값
+    <p>비밀번호: <input type = "password"></p>
+    <p>주소: <input type = "text" name = "password"></p> 아이디와 주소가 구별이 안됨 -> name으로 해결!
+    <input type = "submit">
+</form>
+
+사용자가 입력한 정보를 서버로 전송하기
+<form></form>태그 생성 전체 감싸기
+속성 action="form을 전송할 php서버?어플리케이션?"
+<form>태그 안 형식 <input태그> 닫히는태그 존재X
+속성 type(형식)= text또는 password 또는 submit
+속성 name(고유이름)=id, pwd, adress
+제출 버튼입력 <input type="submit">
+
+여러 줄을 입력받고 싶을 때?
+<textarea cols = "50" rows = "2"> </textarea>
+
+radio: 단일 선택 / checkbox: 다중 선택
+button은 submit과 다르게 다른 창으로 안 넘어감, 즉 버튼 UI만 만들어줌
+hidden: submit 시에만 정보 전송, 비가시화
+
+<label>은 폼태그의 이름을 지정하는 태그
+방법 두가지 1. label for=""와 이름을 지정하려는 태그 input id=""를 같은 값으로 묶어준다.
+2. 이름을 지정하려는 input태그를 label태그로 감싸준다.
+
+-> 이렇게 하면 label, input에 해당하는 UI 중 아무거나 클릭해도 해당 필드에 포커스가 이동한다.
+=> label태그 자체로의 기능은 없지만 제목을 부여함으로써 가독성 및 정보로서의 가치를 높여주고 사용성도
+약간은 증대된다.
+
+file 업로드 시 method = "post", enctype = "multipart/form-data
+file에도 name 을 붙여야 함
+
+<font size = "1" color = "red"> : 1~7 크기
+
+<meta> 태그
+웹페이지에 표현되진 않지만, 웹 페이지를 잘 설명하기 위한 부가 정보들을 담당한다.
+
+사용가능한 속성
+· charset="속성값" : 브라우저에 디코딩되는 문자형식을 지정 (속성값 utf-8은 한글폰트를 정상 출력시켜줌)
+· name="description" content="내용" : 검색 결과에 대한 요약에 사용됨
+· name="keywords" content="내용" : 문서를 설명하는 중요 단어(키워드)들
+· name="author" content="내용" : 저자
+· http-equiv="refresh" content="숫자" : 지정한 시간(초) 마다 웹페이지를 리프레쉬 시켜줌
+
+의미론적 태그
+footer: 화면 하단
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
